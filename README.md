@@ -24,7 +24,8 @@ $db = new \Kebab\KebabDatabase();
 $twoHundred = $db->getInteger('SELECT 2*100');
 
 # You can use the form getInt() or getInteger(), as you prefer.
-# The second parameter works like COALESCE function; the value is returned when the main searched value is null or not found.
+# The second parameter works like COALESCE function; the value is 
+# returned when the main searched value is null or not found.
 $notFound = $db->getInt("SELECT id FROM users WHERE name='horatius'",-1);
 
 $userBirthday = $db->getString("SELECT DATE_FORMAT('MMM, DD',birthdate) FROM users");
